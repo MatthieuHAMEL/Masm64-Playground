@@ -136,7 +136,7 @@ mov dst src
 5) Only constants of **32 bits** can be moved in **64 bits memory** location.
 So if we have a 64 bits constant we must put it in a register before moving it in the memory.
 
-### V.2. ADD, SUB 
+### V.2. / V.3 ADD, SUB 
 
 ```
 add dst src      ; dst = src + dst 
@@ -145,12 +145,41 @@ sub dst src      ; dst = dst - src
 
 Constant operands are max 32 bits.
 
-### V.3. LEA (Load Effective Address)
+### V.4. LEA (Load Effective Address)
 
 ```
 lea reg64, memory_var
 ```
 
 Loads the address of memory_var in reg64.
+
+### V.5. RET
+
+```
+ret 
+```
+
+Returns the control from a procedure. 
+
+It also takes an operand -- todo.
+
+### V.6. CALL 
+
+```
+call proc_name
+```
+
+Calls the procedure proc_name. 
+
+A procedure is defined like that : 
+
+```
+myprocedure proc
+ ...
+ 
+ ...
+ ret    ; typically
+myprocedure endp
+```
 
 
