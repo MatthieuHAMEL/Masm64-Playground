@@ -110,5 +110,47 @@ myString byte 'H', 'e', 'l', 'l', 'o', 0
 
 ; Syntactic sugar for strings          
 myString byte 'Hello', 0
+
+; A constant 
+dataSize = 256
 ```
+
+## V - Instructions 
+
+### V.1. MOV 
+
+```
+mov dst src
+```
+
+#### Rules : 
+
+1) In general, dst and src must be same-sized
+
+2) If src is a constant its size can be smaller or equal to dst size. 
+
+3) src and dst can be in memory or in registers. 
+
+4) src can be a constant, but of course dst cannot.
+
+5) Only constants of **32 bits** can be moved in **64 bits memory** location.
+So if we have a 64 bits constant we must put it in a register before moving it in the memory.
+
+### V.2. ADD, SUB 
+
+```
+add dst src      ; dst = src + dst 
+sub dst src      ; dst = dst - src 
+```
+
+Constant operands are max 32 bits.
+
+### V.3. LEA (Load Effective Address)
+
+```
+lea reg64, memory_var
+```
+
+Loads the address of memory_var in reg64.
+
 
