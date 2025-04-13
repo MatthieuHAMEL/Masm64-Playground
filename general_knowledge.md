@@ -58,4 +58,57 @@ with 1 bit values : those interesting are :
 - zero 
 ... among a few others ... 
 
-### III - Memory
+## III - Memory
+
+- The byte (B) (8b) is the smallest memory unit. 
+
+Bigger units are : 
+- The word (2B) 
+- The double word (4B)
+
+The address of a memory unit is the address of the first byte.
+
+## IV - Variables
+
+In the .DATA section, distinct from the .CODE section.
+
+```
+label  directive ?
+```
+
+? Is for having the initial value undefined, 
+it can be replaced by the actual wished initial value. 
+
+label is the variable name, directive belongs to the following:
+ 
+- byte / db
+- word / dw
+- dword / dd (32 bits)
+- qword / dq (quad-word, 64 bits)
+- tbyte / dt (80 bits)
+- oword (octal word, 128 bits)
+- real4 (32 bits float)
+- real8 (64 bits float)
+- real10 (80 bits float)
+
+And their signed counterparts: (NB: signed/unsigned doesn't really matter!)
+
+- sbyte (signed)
+- sword
+- sdword
+- sqword
+
+e.g. 
+
+```
+  .data
+u8   byte    15
+i8   sbyte   250 ; ok because it fits in 8b even if not in [-128, 128)
+
+; multiple bytes in a single declaration !
+myString byte 'H', 'e', 'l', 'l', 'o', 0    
+
+; Syntactic sugar for strings          
+myString byte 'Hello', 0
+```
+
