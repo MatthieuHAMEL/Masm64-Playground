@@ -19,7 +19,9 @@ externdef  printf:proc
 
 ### Pass parameters 
 
-Put the values in RCX, RDX, R8, R9 (in that order)
+MS ABI :
+
+- Put the values in RCX, RDX, R8, R9 (in that order)
 
 e.g. for printf 
 ```
@@ -27,3 +29,5 @@ myString byte 'Hello, World!', 0
 lea RCX myString
 call printf
 ```
+
+- Retval in RAX if integer or pointer
