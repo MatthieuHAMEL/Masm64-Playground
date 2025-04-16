@@ -143,7 +143,10 @@ add dst src      ; dst = src + dst
 sub dst src      ; dst = dst - src 
 ```
 
-Constant operands are max 32 bits.
+Rules are basically the same than MOV ; operands must have the same size, 
+but src, if it is a constant, just has to fit the destination operand.
+
+Like for MOV, operands are max 32 bits.
 
 ### V.4. LEA (Load Effective Address)
 
