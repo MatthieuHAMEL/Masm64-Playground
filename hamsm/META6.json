@@ -1,0 +1,11 @@
+{
+  "meta-version" : "1",
+  "name"         : "Hamsm",
+  "version"      : "0.0.1",
+  "description"  : "CLI that builds a .asm + .cpp pair",
+  "auth"         : "github:MatthieuHAMEL",
+  "license"      : "Artistic-2.0",
+  "raku-version" : "6.*",
+  "provides": { "hamsmm": "bin/hamsmm.rakumod" },
+  "depends"      : []
+}

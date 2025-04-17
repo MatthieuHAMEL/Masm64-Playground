@@ -1,0 +1,3 @@
+use Test;
+use-ok 'hamsmm';
+done-testing;
