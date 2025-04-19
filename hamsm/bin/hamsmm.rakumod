@@ -21,7 +21,7 @@ sub simple-build
 }
 
  # hamsm -s, --simple    (no other option for now)
-sub MAIN(Bool :s(:$simple) = False) 
+sub MAIN(Bool :s(:$simple) = False) is export
 {
   if $simple {
     simple-build();
